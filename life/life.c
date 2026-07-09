@@ -67,9 +67,8 @@ int main(int ac, char **av)
 					}
 				}
 
-				if (board[y][x] && (density == 2 || density == 3))
-					new_board[y][x] = 1;
-				else if (!board[y][x] && density == 3)
+				if ((board[y][x] && (density == 2 || density == 3))
+					|| (!board[y][x] && density == 3))
 					new_board[y][x] = 1;
 				else
 					new_board[y][x] = 0;
